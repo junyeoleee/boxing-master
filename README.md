@@ -5,6 +5,7 @@
 
 
 🛠 Usage Technologies and Libraries
+
 javascript, python, flask, teachable machine
 
 
