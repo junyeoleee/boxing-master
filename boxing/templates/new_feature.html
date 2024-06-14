@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boxing Game</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: #000; /* 배경색 변경 */
+        }
+
+        .title-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .title-container {
+            align-items: flex-start;
+            padding-top: 10%;
+        }
+
+        .start-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            align-items: flex-end;
+            padding-bottom: 10%;
+        }
+
+        h1, h2 {
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 4em;
+            color: #fff; /* 네온 색상 */
+            text-shadow:
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px #08f,
+                0 0 40px #08f,
+                0 0 70px #08f,
+                0 0 80px #08f,
+                0 0 100px #08f,
+                0 0 150px #08f;
+            animation: neon 1.5s ease-in-out infinite alternate;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #fff;
+            animation: blinker 1.5s linear infinite;
+        }
+
+        @keyframes neon {
+            from {
+                text-shadow:
+                    0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 15px #08f,
+                    0 0 20px #08f,
+                    0 0 25px #08f,
+                    0 0 30px #08f,
+                    0 0 35px #08f,
+                    0 0 40px #08f;
+            }
+            to {
+                text-shadow:
+                    0 0 10px #fff,
+                    0 0 20px #fff,
+                    0 0 30px #08f,
+                    0 0 40px #08f,
+                    0 0 70px #08f,
+                    0 0 80px #08f,
+                    0 0 100px #08f,
+                    0 0 150px #08f;
+            }
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title-container">
+        <h2>Boxing Game</h2>
+    </div>
+
+    <div class="start-container" id="start-screen">
+        <h1>Click to Start</h1>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('start-screen').addEventListener('click', () => {
+                window.location.href = '/boxing';
+            });
+        });
+    </script>
+</body>
+</html>
